@@ -118,16 +118,16 @@ class SmartIndexBar : View {
                     index = INDEX_STRING.size - 1
                 }
                 if (null != onSmartIndexBarPressedListener) {
-                    onSmartIndexBarPressedListener!!.pressed(index, INDEX_STRING[index])
+                    onSmartIndexBarPressedListener?.pressed(index, INDEX_STRING[index])
                     /*if (null != layoutManager) {
-                        layoutManager!!.scrollToPositionWithOffset(index, 0)
+                        layoutManager?.scrollToPositionWithOffset(index, 0)
                     }*/
                 }
             }
             MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
                 eventState(1)
                 if (null != onSmartIndexBarPressedListener) {
-                    onSmartIndexBarPressedListener!!.end()
+                    onSmartIndexBarPressedListener?.end()
                 }
             }
         }
